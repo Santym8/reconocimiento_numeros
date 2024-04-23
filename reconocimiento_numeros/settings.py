@@ -25,15 +25,14 @@ SECRET_KEY = 'django-insecure-arb+gyc)cbn!9n3&d9tz31vlrq8z7+dt83v7p&r%o+ivgg)*t8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://reconocimiento-numeros.onrender.com'
-],
-ALLOWED_HOSTS = [
-    'https://reconocimiento-numeros.onrender.com',
-],
-CORS_ORIGIN_WHITELIST = [
-    'https://reconocimiento-numeros.onrender.com',
-]
+
+ALLOWED_HOSTS = ['*']
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = ['https://reconocimiento-numeros.onrender.com']
+
+
 
 # Application definition
 
