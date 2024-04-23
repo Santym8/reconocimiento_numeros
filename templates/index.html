@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload and Display Image</title>
+  </head>
+  <body>
+    <h1>Upload an Image</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Upload</button>
+    </form>
+
+    {% if image_data_url %}
+      <h2>Uploaded Image:</h2>
+      <img src="{{ image_data_url }}" alt="Uploaded Image" />
+    {% endif %}
+
+    {% if number_result is not null %}
+      <h2>Number Result:</h2>
+      <p>{{ number_result }}</p>
+    {% endif %}
+  </body>
+</html>
