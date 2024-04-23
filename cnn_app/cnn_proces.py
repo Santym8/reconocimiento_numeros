@@ -12,7 +12,7 @@ def get_number_from_image(image_data):
     image_array = np.array(image)
     
     if image_array.shape[0] != 28 or image_array.shape[1] != 28:
-        image = image.resize((28, 28), Image.ANTIALIAS)
+        image = image.resize((28, 28), Image.LANCZOS)
         image_array = np.array(image)
 
     gray = np.dot(image_array[..., :3], [0.299, 0.587, 0.114])
