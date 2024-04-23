@@ -6,3 +6,4 @@ pip install joblib==1.2.0
 pip install scikit-learn==1.3.0
 pip install django-cors-headers
 pip install pillow==9.3.0
+pip install django-bootstrap-v5  
